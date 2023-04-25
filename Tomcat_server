@@ -1,0 +1,41 @@
+Pre-requisites
+Java 11
+Install Apache Tomcat
+Download tomcat packages from https://tomcat.apache.org/download-10.cgi
+Note: Make sure you change <version> with the tomcat version which you download.
+
+# Step 1: Download Tomcat for Windows
+
+https://tomcat.apache.org/download-10.cgi
+
+1. Browse to the official Apache Tomcat website. Locate the Download section and click the latest Tomcat version available. At the time of writing this article, the latest Tomcat version was version 10.
+
+2. On the Download page, scroll down and locate the Binary Distributions area.
+In the Core list, depending on the installation type you prefer, click the download link for the Windows Service Installer or the 32bit/64bit Windows zip file.
+
+Step 2: Install Tomcat
+Install Tomcat via the Windows Service Installer for an automated and wizard-guided experience. The service installer installs the Tomcat service and runs it automatically when the system boots.
+
+  2. In the Tomcat Setup welcome screen, click Next to proceed.
+
+  3. Read the License Agreement and if you agree to the terms, click I Agree to proceed to the next step.
+
+  4. In the Tomcat component selection screen, choose Full in the dropdown menu to ensure the wizard installs the Tomcat Host Manager and Servlet and JSP examples web    applications. Alternatively, keep the default Normal installation type and click Next.
+
+  5. The next step configures the Tomcat server. For instance, enter the Administrator login credentials or choose a different connection port. When finished, click      Next to proceed to the next step.
+
+  6. The next step requires you to enter the full path to the JRE directory on your system. The wizard auto-completes this if you have previously set up the Java         environment variables. Click Next to proceed to the next step.
+
+  7. Choose the Tomcat server install location or keep the default one and click Install.
+
+  8. Check the Run Apache Tomcat box to start the service after the installation finishes. Optionally, check the Show Readme box to see the Readme file. To complete      the installation, click Finish.
+
+  9. A popup window appears that starts the Tomcat service. After the process completes, the window closes automatically. The Apache Tomcat web server is now             successfully installed .
+
+  Note: you may get below error while starting tomcat incase if you dont install Java
+  Neither the JAVA_HOME nor the JRE_HOME environment variable is defined At least one of these environment variable is needed to run this program
+
+
+http://<Public_IP>:8080
+Using unique ports for each application is a best practice in an environment. But tomcat and Jenkins runs on ports number 8080. Hence lets change tomcat port number to 
+8090. Change port number in conf/server.xml file under tomcat home
